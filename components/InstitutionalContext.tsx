@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Scale, Globe, BookOpen } from "lucide-react";
 
-const fadeUp = {
+const fadeUp: any = {
     hidden: { opacity: 0, y: 40 },
     show: (i: number) => ({
         opacity: 1,
