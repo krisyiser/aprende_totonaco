@@ -168,7 +168,7 @@ export function Hero() {
                         className="hero-cards"
                     >
                         {[
-                            { icon: <Calendar size={18} color="#811646" />, label: "Inicio", value: "9 marzo 2026", sub: "16:00 hrs" },
+                            { icon: <Calendar size={18} color="#811646" />, label: "Inicio", value: "10 marzo 2026", sub: "16:00 hrs" },
                             { icon: <MapPin size={18} color="#42B3AC" />, label: "Sede", value: "CRAM Papantla", sub: "C. Obispo de las Casas 109" },
                             { icon: <Clock size={18} color="#A75976" />, label: "Horario", value: "Mar y Jue", sub: "2 hrs por sesión" },
                         ].map((card, i) => (
