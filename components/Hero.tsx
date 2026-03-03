@@ -227,24 +227,6 @@ export function Hero() {
                             priority
                         />
                     </motion.div>
-                    {/* Floating badge */}
-                    <motion.div
-                        animate={{ y: [0, -8, 0] }}
-                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                        className="glass-card"
-                        style={{
-                            position: "absolute",
-                            bottom: "5%",
-                            right: "0",
-                            padding: "0.75rem 1rem",
-                            background: "rgba(241,206,144,0.25)",
-                            border: "1px solid rgba(241,206,144,0.6)",
-                            borderRadius: "1rem",
-                        }}
-                    >
-                        <div style={{ fontSize: "0.72rem", color: "#8a6520", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em" }}>Sin costo</div>
-                        <div style={{ fontSize: "1.1rem", fontWeight: 900, color: "#811646" }}>100% Gratis</div>
-                    </motion.div>
                 </motion.div>
             </div>
 
@@ -273,9 +255,12 @@ export function Hero() {
 
             <style>{`
         @media (max-width: 768px) {
-          .hero-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+          .hero-grid { 
+            display: flex !important; 
+            flex-direction: column !important; 
+            gap: 2.5rem !important; 
+          }
           .hero-cards { grid-template-columns: 1fr !important; gap: 0.625rem !important; }
-          .hero-grid > div:last-child { display: none; }
         }
       `}</style>
         </section>
