@@ -15,7 +15,7 @@ interface CalendarEvent {
 
 const EVENTS: CalendarEvent[] = [
     {
-        date: "Domingo, 9 de marzo de 2026",
+        date: "Domingo, 10 de marzo de 2026",
         time: "16:00 hrs",
         title: "Inicio del Curso–Taller",
         subtitle: "Nivel 1 y 2 — CRAM Papantla",

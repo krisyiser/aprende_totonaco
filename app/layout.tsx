@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Convocatoria: Curso–Taller de Lengua Tutunakú | Ayuntamiento de Papantla",
   description:
-    "El H. Ayuntamiento de Papantla convoca a la ciudadanía a inscribirse al Curso–Taller de Lengua Tutunakú, Etapa Inicial I y II. Totalmente gratis. Inicio: 9 de marzo de 2026.",
+    "El H. Ayuntamiento de Papantla convoca a la ciudadanía a inscribirse al Curso–Taller de Lengua Tutunakú, Etapa Inicial I y II. Totalmente gratis. Inicio: 10 de marzo de 2026.",
   keywords: [
     "Tutunakú", "Totonaco", "Lengua Indígena", "Papantla", "Veracruz",
     "curso taller", "convocatoria", "gratis", "ayuntamiento",

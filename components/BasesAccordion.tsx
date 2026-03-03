@@ -141,7 +141,7 @@ const BASES: AccordionItem[] = [
                         padding: "1.25rem",
                     }}
                 >
-                    <div style={{ fontSize: "1.5rem", fontWeight: 900, color: "#811646" }}>9 de marzo de 2026</div>
+                    <div style={{ fontSize: "1.5rem", fontWeight: 900, color: "#811646" }}>10 de marzo de 2026</div>
                     <div style={{ color: "#5a3345", marginTop: "0.25rem" }}>
                         Hora: <strong>16:00 hrs</strong> — Nivel 1 y Nivel 2
                     </div>
