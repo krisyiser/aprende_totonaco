@@ -164,6 +164,7 @@ export function InstitutionalContext() {
                     variants={fadeUp}
                     initial="hidden"
                     animate={inView ? "show" : "hidden"}
+                    className="convoca-block"
                     style={{
                         background: "linear-gradient(135deg, #811646 0%, #622A4E 60%, #4a1b3a 100%)",
                         borderRadius: "1.5rem",
@@ -200,6 +201,7 @@ export function InstitutionalContext() {
                     />
 
                     <span
+                        className="convoca-title"
                         style={{
                             display: "block",
                             fontSize: "clamp(3rem, 8vw, 5.5rem)",
@@ -237,7 +239,8 @@ export function InstitutionalContext() {
         @media (max-width: 768px) {
           .pillars-grid { grid-template-columns: 1fr !important; }
           section[id="convocatoria"] .glass-card { padding: 1.5rem !important; }
-          section[id="convocatoria"] [style*="padding: 3rem 3rem"] { padding: 2rem 1.5rem !important; }
+          .convoca-block { padding: 2.5rem 1.25rem !important; }
+          .convoca-title { font-size: clamp(2.2rem, 11vw, 5.5rem) !important; letter-spacing: 0.05em !important; word-break: break-word; }
         }
       `}</style>
         </section>

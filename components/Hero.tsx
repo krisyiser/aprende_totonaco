@@ -257,8 +257,8 @@ export function Hero() {
         @media (max-width: 768px) {
           .hero-grid { 
             display: flex !important; 
-            flex-direction: column !important; 
-            gap: 2.5rem !important; 
+            flex-direction: column-reverse !important; 
+            gap: 2rem !important; 
           }
           .hero-cards { grid-template-columns: 1fr !important; gap: 0.625rem !important; }
         }
