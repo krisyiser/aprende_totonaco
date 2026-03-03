@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, BookOpen, Calendar, Phone } from "lucide-react";
+import { Menu, X, Calendar, Phone } from "lucide-react";
+
+import Image from "next/image";
 
 const NAV_ITEMS = [
     { label: "Inicio", href: "#inicio" },
@@ -76,24 +78,21 @@ export function Header() {
                     >
                         <div
                             style={{
-                                width: "36px",
-                                height: "36px",
-                                borderRadius: "10px",
-                                background: "linear-gradient(135deg, #811646, #622A4E)",
+                                width: "45px",
+                                height: "45px",
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",
-                                boxShadow: "0 4px 12px rgba(129,22,70,0.3)",
                             }}
                         >
-                            <BookOpen size={18} color="white" />
+                            <Image src="/logo.png" alt="Logo Limakxtum" width={45} height={45} style={{ objectFit: "contain" }} priority />
                         </div>
                         <div>
                             <span style={{ fontWeight: 800, fontSize: "0.95rem", color: "#811646", display: "block", lineHeight: 1.1 }}>
                                 Papantla
                             </span>
                             <span style={{ fontWeight: 500, fontSize: "0.72rem", color: "#A75976", letterSpacing: "0.05em" }}>
-                                Limakxtum–Juntos
+                                Limakxtum
                             </span>
                         </div>
                     </a>

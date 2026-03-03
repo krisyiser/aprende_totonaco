@@ -1,92 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Calendar, MapPin, Clock, BookOpen, Star, ChevronDown } from "lucide-react";
+import Image from "next/image";
 
-/* ─── SVG Ornamental (emblema abstracto) ─── */
-function TutunakuOrnament() {
-    return (
-        <svg
-            viewBox="0 0 420 420"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            style={{ width: "100%", height: "100%", maxWidth: "420px" }}
-        >
-            {/* Outer ring */}
-            <circle cx="210" cy="210" r="195" stroke="#811646" strokeWidth="1.5" strokeDasharray="8 6" opacity="0.3" />
-            <circle cx="210" cy="210" r="165" stroke="#42B3AC" strokeWidth="2" opacity="0.2" />
-            <circle cx="210" cy="210" r="130" stroke="#F1CE90" strokeWidth="1" strokeDasharray="4 8" opacity="0.4" />
-
-            {/* Central medallion */}
-            <circle cx="210" cy="210" r="85" fill="rgba(129,22,70,0.06)" stroke="#811646" strokeWidth="2" opacity="0.6" />
-            <circle cx="210" cy="210" r="60" fill="rgba(66,179,172,0.08)" stroke="#42B3AC" strokeWidth="1.5" opacity="0.5" />
-
-            {/* Center star/glyph */}
-            <polygon
-                points="210,150 222,188 262,188 230,212 242,250 210,228 178,250 190,212 158,188 198,188"
-                fill="rgba(129,22,70,0.12)"
-                stroke="#811646"
-                strokeWidth="1.5"
-                opacity="0.7"
-            />
-
-            {/* Decorative petals */}
-            {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => {
-                const rad = (angle * Math.PI) / 180;
-                const x1 = Math.round((210 + 95 * Math.cos(rad)) * 1000) / 1000;
-                const y1 = Math.round((210 + 95 * Math.sin(rad)) * 1000) / 1000;
-                const x2 = Math.round((210 + 115 * Math.cos(rad)) * 1000) / 1000;
-                const y2 = Math.round((210 + 115 * Math.sin(rad)) * 1000) / 1000;
-                return (
-                    <g key={i}>
-                        <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="#42B3AC" strokeWidth="2" opacity="0.5" />
-                        <circle cx={x2} cy={y2} r="4" fill="#F1CE90" opacity="0.7" />
-                    </g>
-                );
-            })}
-
-            {/* Radial lines */}
-            {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((angle, i) => {
-                const rad = (angle * Math.PI) / 180;
-                const x1 = Math.round((210 + 130 * Math.cos(rad)) * 1000) / 1000;
-                const y1 = Math.round((210 + 130 * Math.sin(rad)) * 1000) / 1000;
-                const x2 = Math.round((210 + 155 * Math.cos(rad)) * 1000) / 1000;
-                const y2 = Math.round((210 + 155 * Math.sin(rad)) * 1000) / 1000;
-                return (
-                    <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#A75976" strokeWidth="1" opacity="0.35" />
-                );
-            })}
-
-            {/* Corner glyphs abstract */}
-            {[
-                { cx: 60, cy: 60 }, { cx: 360, cy: 60 },
-                { cx: 60, cy: 360 }, { cx: 360, cy: 360 }
-            ].map((pt, i) => (
-                <g key={i}>
-                    <circle cx={pt.cx} cy={pt.cy} r="18" stroke="#7095A2" strokeWidth="1" fill="rgba(112,149,162,0.08)" opacity="0.5" />
-                    <circle cx={pt.cx} cy={pt.cy} r="6" fill="#42B3AC" opacity="0.4" />
-                </g>
-            ))}
-
-            {/* Abstract band */}
-            <path
-                d="M 55 210 Q 130 170, 210 210 Q 290 250, 365 210"
-                stroke="#F1CE90"
-                strokeWidth="2"
-                fill="none"
-                opacity="0.5"
-            />
-            <path
-                d="M 55 210 Q 130 250, 210 210 Q 290 170, 365 210"
-                stroke="#42B3AC"
-                strokeWidth="2"
-                fill="none"
-                opacity="0.4"
-            />
-        </svg>
-    );
-}
 
 /* ─── Floating blobs ─── */
 function Blob({ style }: { style: React.CSSProperties }) {
@@ -105,6 +22,10 @@ function Blob({ style }: { style: React.CSSProperties }) {
 }
 
 export function Hero() {
+    const { scrollY } = useScroll();
+    const yParallax = useTransform(scrollY, [0, 500], [0, 150]);
+    const opacityFade = useTransform(scrollY, [0, 300], [1, 0]);
+
     return (
         <section
             id="inicio"
@@ -289,11 +210,22 @@ export function Hero() {
                         }}
                     />
                     <motion.div
-                        animate={{ rotate: 360 }}
-                        transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
-                        style={{ width: "min(380px, 90vw)", height: "min(380px, 90vw)" }}
+                        style={{ width: "min(420px, 90vw)", height: "auto", y: yParallax, opacity: opacityFade, position: "relative", zIndex: 10 }}
                     >
-                        <TutunakuOrnament />
+                        <Image
+                            src="/flyer.jpeg"
+                            alt="Flyer del Curso-Taller"
+                            width={420}
+                            height={420}
+                            style={{
+                                width: "100%",
+                                height: "auto",
+                                borderRadius: "20px",
+                                boxShadow: "0 20px 50px rgba(129,22,70,0.25)",
+                                border: "4px solid rgba(255,255,255,0.7)"
+                            }}
+                            priority
+                        />
                     </motion.div>
                     {/* Floating badge */}
                     <motion.div

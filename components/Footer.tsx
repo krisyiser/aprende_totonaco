@@ -1,6 +1,7 @@
 "use client";
 
-import { BookOpen, Heart, Star } from "lucide-react";
+import Image from "next/image";
+import { Heart, Star } from "lucide-react";
 
 export function Footer() {
     const year = new Date().getFullYear();
@@ -81,22 +82,19 @@ export function Footer() {
                         <div style={{ display: "flex", alignItems: "center", gap: "0.625rem", marginBottom: "1rem" }}>
                             <div
                                 style={{
-                                    width: "40px",
-                                    height: "40px",
-                                    borderRadius: "10px",
-                                    background: "linear-gradient(135deg, #811646, #622A4E)",
+                                    width: "48px",
+                                    height: "48px",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    boxShadow: "0 4px 12px rgba(129,22,70,0.4)",
                                 }}
                             >
-                                <BookOpen size={20} color="white" />
+                                <Image src="/logo.png" alt="Logo Limakxtum" width={48} height={48} style={{ objectFit: "contain" }} />
                             </div>
                             <div>
                                 <div style={{ fontWeight: 800, color: "white", lineHeight: 1.1 }}>Papantla</div>
                                 <div style={{ fontSize: "0.72rem", color: "#A75976", letterSpacing: "0.05em" }}>
-                                    Limakxtum–Juntos
+                                    Limakxtum
                                 </div>
                             </div>
                         </div>
