@@ -192,83 +192,93 @@ export function Registration() {
                             </div>
                         </div>
 
-                        <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-                            {/* Nombre */}
+                        <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+                            {/* Nombre completo */}
                             <div>
-                                <label
-                                    style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.82rem", fontWeight: 700, color: "#3a1d2b", marginBottom: "0.4rem" }}
-                                >
+                                <label style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.82rem", fontWeight: 700, color: "#3a1d2b", marginBottom: "0.4rem" }}>
                                     <UserCircle size={14} color="#811646" />
                                     Nombre completo
                                 </label>
-                                <div
-                                    style={{
-                                        width: "100%",
-                                        padding: "0.625rem 0.875rem",
-                                        border: "1.5px solid rgba(129,22,70,0.2)",
-                                        borderRadius: "0.625rem",
-                                        background: "rgba(235,225,231,0.4)",
-                                        fontSize: "0.875rem",
-                                        color: "#7a4f62",
-                                        cursor: "not-allowed",
-                                    }}
-                                >
+                                <div style={{ width: "100%", padding: "0.625rem 0.875rem", border: "1.5px solid rgba(129,22,70,0.2)", borderRadius: "0.625rem", background: "rgba(235,225,231,0.4)", fontSize: "0.875rem", color: "#7a4f62", cursor: "not-allowed", textAlign: "left" }}>
                                     Ej. María López García
                                 </div>
                             </div>
 
-                            {/* Teléfono */}
+                            {/* Dirección */}
                             <div>
-                                <label
-                                    style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.82rem", fontWeight: 700, color: "#3a1d2b", marginBottom: "0.4rem" }}
-                                >
-                                    <Phone size={14} color="#811646" />
-                                    Teléfono
+                                <label style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.82rem", fontWeight: 700, color: "#3a1d2b", marginBottom: "0.4rem" }}>
+                                    <MapPin size={14} color="#811646" />
+                                    Dirección
                                 </label>
-                                <div
-                                    style={{
-                                        width: "100%",
-                                        padding: "0.625rem 0.875rem",
-                                        border: "1.5px solid rgba(129,22,70,0.2)",
-                                        borderRadius: "0.625rem",
-                                        background: "rgba(235,225,231,0.4)",
-                                        fontSize: "0.875rem",
-                                        color: "#7a4f62",
-                                        cursor: "not-allowed",
-                                    }}
-                                >
+                                <div style={{ width: "100%", padding: "0.625rem 0.875rem", border: "1.5px solid rgba(129,22,70,0.2)", borderRadius: "0.625rem", background: "rgba(235,225,231,0.4)", fontSize: "0.875rem", color: "#7a4f62", cursor: "not-allowed", textAlign: "left" }}>
+                                    Ej. Calle Principal #123, Col. Centro
+                                </div>
+                            </div>
+
+                            {/* Cel */}
+                            <div>
+                                <label style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.82rem", fontWeight: 700, color: "#3a1d2b", marginBottom: "0.4rem" }}>
+                                    <Phone size={14} color="#811646" />
+                                    Cel
+                                </label>
+                                <div style={{ width: "100%", padding: "0.625rem 0.875rem", border: "1.5px solid rgba(129,22,70,0.2)", borderRadius: "0.625rem", background: "rgba(235,225,231,0.4)", fontSize: "0.875rem", color: "#7a4f62", cursor: "not-allowed", textAlign: "left" }}>
                                     Ej. 784 100 0000
                                 </div>
                             </div>
 
-                            {/* Nivel */}
+                            {/* Menores de edad & Credencial Notice */}
+                            <div style={{ padding: "0.75rem", background: "rgba(66,179,172,0.1)", border: "1px dashed rgba(66,179,172,0.4)", borderRadius: "0.5rem", textAlign: "left" }}>
+                                <p style={{ fontSize: "0.75rem", color: "#2B7A75", margin: 0, lineHeight: 1.4 }}>
+                                    <strong style={{ display: "block", marginBottom: "0.2rem" }}>Importante:</strong>
+                                    En caso de ser menor de edad se atiende a partir de los 10 años. Se debe anexar copia de la credencial de elector.
+                                </p>
+                            </div>
+
+                            {/* Perspectiva */}
                             <div>
-                                <label
-                                    style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.82rem", fontWeight: 700, color: "#3a1d2b", marginBottom: "0.4rem" }}
-                                >
+                                <label style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.82rem", fontWeight: 700, color: "#3a1d2b", marginBottom: "0.4rem" }}>
                                     <BookOpen size={14} color="#811646" />
-                                    Nivel
+                                    ¿Cuál es su perspectiva del curso?
+                                </label>
+                                <div style={{ width: "100%", minHeight: "60px", padding: "0.625rem 0.875rem", border: "1.5px solid rgba(129,22,70,0.2)", borderRadius: "0.625rem", background: "rgba(235,225,231,0.4)", fontSize: "0.875rem", color: "#7a4f62", cursor: "not-allowed", textAlign: "left" }}>
+                                    Escriba su respuesta...
+                                </div>
+                            </div>
+
+                            {/* Noción */}
+                            <div>
+                                <label style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.82rem", fontWeight: 700, color: "#3a1d2b", marginBottom: "0.4rem", textAlign: "left" }}>
+                                    <MessageCircle size={14} color="#811646" />
+                                    <span>¿Tiene alguna noción del idioma tutunakú?</span>
                                 </label>
                                 <div style={{ display: "flex", gap: "0.625rem" }}>
-                                    {["Nivel I", "Nivel II"].map((nivel) => (
-                                        <div
-                                            key={nivel}
-                                            style={{
-                                                flex: 1,
-                                                padding: "0.625rem",
-                                                border: nivel === "Nivel I" ? "2px solid #811646" : "1.5px solid rgba(129,22,70,0.2)",
-                                                borderRadius: "0.625rem",
-                                                background: nivel === "Nivel I" ? "rgba(129,22,70,0.08)" : "rgba(235,225,231,0.4)",
-                                                textAlign: "center",
-                                                fontSize: "0.875rem",
-                                                fontWeight: nivel === "Nivel I" ? 700 : 500,
-                                                color: nivel === "Nivel I" ? "#811646" : "#7a4f62",
-                                                cursor: "not-allowed",
-                                            }}
-                                        >
-                                            {nivel}
+                                    {["Sí", "No", "Un poco"].map((opcion) => (
+                                        <div key={opcion} style={{ flex: 1, padding: "0.5rem", border: "1.5px solid rgba(129,22,70,0.2)", borderRadius: "0.5rem", background: "rgba(235,225,231,0.4)", textAlign: "center", fontSize: "0.875rem", color: "#7a4f62", cursor: "not-allowed" }}>
+                                            {opcion}
                                         </div>
                                     ))}
+                                </div>
+                            </div>
+
+                            {/* Término */}
+                            <div>
+                                <label style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.82rem", fontWeight: 700, color: "#3a1d2b", marginBottom: "0.4rem", textAlign: "left" }}>
+                                    <MessageCircle size={14} color="#811646" />
+                                    <span>¿Qué es lo que desea saber al término del curso?</span>
+                                </label>
+                                <div style={{ width: "100%", minHeight: "60px", padding: "0.625rem 0.875rem", border: "1.5px solid rgba(129,22,70,0.2)", borderRadius: "0.625rem", background: "rgba(235,225,231,0.4)", fontSize: "0.875rem", color: "#7a4f62", cursor: "not-allowed", textAlign: "left" }}>
+                                    Escriba su respuesta...
+                                </div>
+                            </div>
+
+                            {/* Sugerencia */}
+                            <div>
+                                <label style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.82rem", fontWeight: 700, color: "#3a1d2b", marginBottom: "0.4rem", textAlign: "left" }}>
+                                    <MessageCircle size={14} color="#811646" />
+                                    <span>¿Alguna sugerencia sobre el curso taller?</span>
+                                </label>
+                                <div style={{ width: "100%", minHeight: "60px", padding: "0.625rem 0.875rem", border: "1.5px solid rgba(129,22,70,0.2)", borderRadius: "0.625rem", background: "rgba(235,225,231,0.4)", fontSize: "0.875rem", color: "#7a4f62", cursor: "not-allowed", textAlign: "left" }}>
+                                    Opcional...
                                 </div>
                             </div>
 
