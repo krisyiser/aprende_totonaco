@@ -10,6 +10,7 @@ const NAV_ITEMS = [
     { label: "Inicio", href: "#inicio" },
     { label: "Convocatoria", href: "#convocatoria" },
     { label: "Bases", href: "#bases" },
+    { label: "Semblanza", href: "#semblanza" },
     { label: "Calendario", href: "#calendario" },
     { label: "Inscripción", href: "#inscripcion" },
     { label: "Sede", href: "#sede" },
@@ -103,7 +104,7 @@ export function Header() {
                         style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}
                         className="hide-mobile"
                     >
-                        {NAV_ITEMS.slice(0, 5).map((item) => (
+                        {NAV_ITEMS.slice(0, 6).map((item) => (
                             <a
                                 key={item.href}
                                 href={item.href}

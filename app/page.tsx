@@ -3,6 +3,7 @@ import { ScrollSpy } from "@/components/ScrollSpy";
 import { Hero } from "@/components/Hero";
 import { InstitutionalContext } from "@/components/InstitutionalContext";
 import { BasesAccordion } from "@/components/BasesAccordion";
+import { Semblanza } from "@/components/Semblanza";
 import { CalendarSection } from "@/components/CalendarSection";
 import { Registration } from "@/components/Registration";
 import { Venue } from "@/components/Venue";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <InstitutionalContext />
         <BasesAccordion />
+        <Semblanza />
         <CalendarSection />
         <Registration />
         <Venue />
