@@ -19,7 +19,7 @@ const formSchema = z.object({
     direccion: z.string().min(5, "La dirección es requerida"),
     celular: z.string().min(10, "Ingrese un celular válido (ej. 7841000000)"),
     perspectiva: z.string().min(5, "Por favor, indique su perspectiva"),
-    nocion: z.enum(["Sí", "No", "Un poco"], { required_error: "Seleccione una opción" }),
+    nocion: z.enum(["Sí", "No", "Un poco"] as const, { error: "Por favor indique una opción" }),
     interes: z.string().min(5, "Por favor, indique qué desea saber"),
     sugerencia: z.string().optional(),
 });
